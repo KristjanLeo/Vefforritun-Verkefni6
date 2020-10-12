@@ -1,0 +1,22 @@
+{
+  "name": "vef1-2020-v6",
+  "version": "1.0.0",
+  "description": "## Lýsing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KristjanLeo/Vefforritun-Verkefni6.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KristjanLeo/Vefforritun-Verkefni6/issues"
+  },
+  "homepage": "https://github.com/KristjanLeo/Vefforritun-Verkefni6#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.12"
+  }
+}
