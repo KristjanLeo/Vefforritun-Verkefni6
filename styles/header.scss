@@ -4,7 +4,7 @@
 
 // Allir stílar fyrir haus
 header {
-  margin-bottom: 2rem;
+  margin-bottom: $Bottom-margin-large;
 
   width: 100%;
   height: 100vh;
@@ -19,7 +19,7 @@ header {
     margin: auto;
     width: 100%;
     text-align: center;
-    color: #eeeeee;
+    color: $White;
   }
 
   & h1 {

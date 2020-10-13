@@ -35,34 +35,34 @@ html {
 }
 
 body {
-  font-size: 16px;
+  font-size: $Default-font-size;
   font-family: 'Open Sans', helvetica, arial, sans-serif;
-  color: #222222;
+  color: $Dark-dark-grey;
 }
 
 a {
-  color: #222222;
+  color: $Dark-dark-grey;
 }
 
 button {
-  background-color: #222222;
-  color: #eeeeee;
-  border: 1px solid #000000;
+  background-color: $Dark-dark-grey;
+  color: $White;
+  border: 1px solid $Black;
   border-radius: 5px;
   padding: 0.5rem;
   word-break: initial;
 
   transition:
-    color 300ms ease-in-out,
-    background-color 300ms ease-in-out ;
+    $Change-color,
+    $Change-background-color ;
   &:hover {
-    background-color: #eeeeee;
-    color: #222222;
+    background-color: $White;
+    color: $Dark-dark-grey;
   }
   &:active {
-    background-color: #222222;
-    color: #eeeeee;
-    border: 1px solid #000000;
+    background-color: $Dark-dark-grey;
+    color: $White;
+    border: 1px solid $Black;
   }
 }
 

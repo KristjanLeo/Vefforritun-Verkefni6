@@ -1,3 +1,36 @@
 // Hér eiga að vera stillingar með scss breytum fyrir:
 // grid, max-width á síðu, transitions,
 // liti, margin-bottom gildi sem eru sameiginleg
+
+
+// Grid (Vill ekki setja neikvæða marginið sem breytu)
+$Max-width: 1400px;
+$Medium-width: 799px;
+$Small-width: 499px;
+$One-col: 8.333333333%;
+
+
+// Global
+$Default-font-size: 16px; // Sniðugt að geta breytt þessu hér
+
+
+// Litir
+$White: #eeeeee;
+$Light-grey: #cccccc;
+$Dark-grey: #999999;
+$Dark-dark-grey: #222222;
+$Black: #000000;
+
+
+// Bottom margins
+$Bottom-margin-large: 2rem;
+$Bottom-margin-medium: 1rem;
+$Bottom-margin-small: 0.5rem;
+
+
+// Transitions
+$Smooth: transform 300ms ease-in-out ;
+$Zoom: scale(1.3);
+$Change-color: color 300ms ease-in-out;
+$Change-background-color: background-color 300ms ease-in-out;
+$Flip: rotateY(180deg);

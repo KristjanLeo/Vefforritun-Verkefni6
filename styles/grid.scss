@@ -3,7 +3,7 @@
 
 // Hér skal nota scss @for til að ítra út klösum fyrir grid
 .grid {
-  max-width: 1400px;
+  max-width: $Max-width;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -24,18 +24,18 @@
 @for $i from 1 through 12{ /* Var ekki alveg viss hvort ég mætti nesta media hérna þar sem það býr til þrefalt nest? */
   /* Stórt */
   .col-#{$i}{
-   width: $i*8.333333333%;
+   width: $i*$One-col;
  }
   /* Medium */
- @media (max-width: 799px){
+ @media (max-width: $Medium-width){
   .col-md-#{$i}{
-   width: $i*8.333333333%;
+   width: $i*$One-col;
  }
  }
   /* Small */
- @media (max-width: 499px){
+ @media (max-width: $Small-width){
   .col-sm-#{$i}{
-   width: $i*8.333333333%;
+   width: $i*$One-col;
  }
  }
 }
@@ -43,18 +43,18 @@
 @for $i from 1 through 3{
   /* Stórt */
   .offset-col-#{$i}{
-   margin-left: $i*8.333333333%;
+   margin-left: $i*$One-col;
  }
   /* Medium */
-  @media (max-width: 799px){
+  @media (max-width: $Medium-width){
   .offset-col-md-#{$i}{
-   margin-left: $i*8.333333333%;
+   margin-left: $i*$One-col;
  }
  }
   /* Small */
-   @media (max-width: 499px){
+   @media (max-width: $Small-width){
   .offset-col-sm-#{$i}{
-   margin-left: $i*8.333333333%;
+   margin-left: $i*$One-col;
  }
  }
 }
