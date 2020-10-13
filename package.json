@@ -4,7 +4,11 @@
   "description": "## Lýsing",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "browser-sync": "browser-sync start --server --files \"*\"",
+    "sass": "node-sass --source-map-embed styles.scss styles.css -w",
+    "sass-watch": "node-sass --source-map-embed --watch *.scss --recursive styles.css",
+    "dev": "concurrently npm:sass npm:browser-sync",
+    "lint" : "stylelint styles.scss ./**/*.scss"
   },
   "repository": {
     "type": "git",
@@ -17,6 +21,13 @@
   },
   "homepage": "https://github.com/KristjanLeo/Vefforritun-Verkefni6#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.12"
+    "browser-sync": "^2.26.12",
+    "concurrently": "^5.3.0",
+    "stylelint": "^13.7.2",
+    "stylelint-config-sass-guidelines": "^7.1.0",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "dependencies": {
+    "node-sass": "^4.14.1"
   }
 }
