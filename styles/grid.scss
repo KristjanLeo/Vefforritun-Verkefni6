@@ -2,3 +2,59 @@
 @import './config';
 
 // Hér skal nota scss @for til að ítra út klösum fyrir grid
+.grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.col {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
+@for $i from 1 through 12{ /* Var ekki alveg viss hvort ég mætti nesta media hérna þar sem það býr til þrefalt nest? */
+  /* Stórt */
+  .col-#{$i}{
+   width: $i*8.333333333%;
+ }
+  /* Medium */
+ @media (max-width: 799px){
+  .col-md-#{$i}{
+   width: $i*8.333333333%;
+ }
+ }
+  /* Small */
+ @media (max-width: 499px){
+  .col-sm-#{$i}{
+   width: $i*8.333333333%;
+ }
+ }
+}
+
+@for $i from 1 through 3{
+  /* Stórt */
+  .offset-col-#{$i}{
+   margin-left: $i*8.333333333%;
+ }
+  /* Medium */
+  @media (max-width: 799px){
+  .offset-col-md-#{$i}{
+   margin-left: $i*8.333333333%;
+ }
+ }
+  /* Small */
+   @media (max-width: 499px){
+  .offset-col-sm-#{$i}{
+   margin-left: $i*8.333333333%;
+ }
+ }
+}
