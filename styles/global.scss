@@ -9,35 +9,14 @@
   box-sizing: border-box;
 }
 
-html {
-  position: relative;
-
-  &::before {
-    content: '';
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    margin-right: auto;
-    margin-left: auto;
-
-    width: calc(100% - (2 * var(--offset)));
-    max-width: var(--max_width);
-    min-height: 100vh;
-    background-image: var(--background-columns);
-    background-size: var(--background-width) 100%;
-    z-index: 1000;
-    pointer-events: none;
-  }
-}
-
 body {
   font-size: $Default-font-size;
   font-family: 'Open Sans', helvetica, arial, sans-serif;
   color: $Dark-dark-grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
 }
 
 a {
@@ -68,4 +47,9 @@ button {
 
 h1, h2, h3, h4 {
   font-family: 'Montaga', Georgia, serif;
+}
+
+main {
+  padding-left: 10px;
+  padding-right: 10px;
 }
