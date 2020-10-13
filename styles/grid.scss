@@ -21,20 +21,24 @@
   margin-right: -10px;
 }
 
-@for $i from 1 through 12 { /* Var ekki alveg viss hvort ég mætti nesta media hérna þar sem það býr til þrefalt nest? */
-  /* Stórt */
+/* Stór stærð */
+@for $i from 1 through 12 {
   .col-#{$i} {
     width: $i*$one-col;
   }
+}
 
-  /* Medium */
+/* Medium stærð */
+@for $i from 1 through 12 {
   @media (max-width: $medium-width) {
     .col-md-#{$i} {
       width: $i*$one-col;
     }
   }
+}
 
-  /* Small */
+/* Small stærð */
+@for $i from 1 through 12 {
   @media (max-width: $small-width) {
     .col-sm-#{$i} {
       width: $i*$one-col;
@@ -42,20 +46,24 @@
   }
 }
 
+/* Stórt offset */
 @for $i from 1 through 3 {
-  /* Stórt */
   .offset-col-#{$i} {
     margin-left: $i*$one-col;
   }
+}
 
-  /* Medium */
+/* Medium offset */
+@for $i from 1 through 3 {
   @media (max-width: $medium-width) {
     .offset-col-md-#{$i} {
       margin-left: $i*$one-col;
     }
   }
+}
 
-  /* Small */
+/* Small offset */
+@for $i from 1 through 3 {
   @media (max-width: $small-width) {
     .offset-col-sm-#{$i} {
       margin-left: $i*$one-col;
