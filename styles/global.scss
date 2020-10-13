@@ -1,2 +1,71 @@
 // Sækja config
+@import './config';
+
+
 // Allir stílar fyrir "global", þ.e.a.s. type selectorar, reset etc
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    width: calc(100% - (2 * var(--offset)));
+    max-width: var(--max_width);
+    min-height: 100vh;
+    background-image: var(--background-columns);
+    background-size: var(--background-width) 100%;
+    z-index: 1000;
+    pointer-events: none;
+  }
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  color: #222222;
+}
+
+a {
+  color: #222222;
+}
+
+button {
+  background-color: #222222;
+  color: #eeeeee;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 0.5rem;
+  word-break: initial;
+
+  transition:
+    color 300ms ease-in-out,
+    background-color 300ms ease-in-out ;
+  &:hover {
+    background-color: #eeeeee;
+    color: #222222;
+  }
+  &:active {
+    background-color: #222222;
+    color: #eeeeee;
+    border: 1px solid #000000;
+  }
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montaga', Georgia, serif;
+}
