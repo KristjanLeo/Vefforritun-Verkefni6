@@ -2,33 +2,30 @@
 // grid, max-width á síðu, transitions,
 // liti, margin-bottom gildi sem eru sameiginleg
 
-
 // Grid (Vill ekki setja neikvæða marginið sem breytu)
-$Max-width: 1400px;
-$Medium-width: 799px;
-$Small-width: 499px;
-$One-col: 8.333333333%;
+$max-width: 1400px;
+$medium-width: 799px;
+$small-width: 499px;
+$one-col: 8.333333333%;
 
 // Global
-$Default-font-size: 16px; // Sniðugt að geta breytt þessu hér
+$default-font-size: 16px; // Sniðugt að geta breytt þessu hér
 
 // Litir
-$White: #eeeeee;
-$Light-grey: #cccccc;
-$Dark-grey: #999999;
-$Dark-dark-grey: #222222;
-$Black: #000000;
-
+$white: #eee;
+$light-grey: #ccc;
+$dark-grey: #999;
+$dark-dark-grey: #222;
+$black: #000;
 
 // Bottom margins
-$Bottom-margin-large: 2rem;
-$Bottom-margin-medium: 1rem;
-$Bottom-margin-small: 0.5rem;
-
+$bottom-margin-large: 2rem;
+$bottom-margin-medium: 1rem;
+$bottom-margin-small: 0.5rem;
 
 // Transitions
-$Smooth: transform 300ms ease-in-out ;
-$Zoom: scale(1.3);
-$Change-color: color 300ms ease-in-out;
-$Change-background-color: background-color 300ms ease-in-out;
-$Flip: rotateY(180deg);
+$smooth: transform 300ms ease-in-out;
+$zoom: scale(1.3);
+$change-color: color 300ms ease-in-out;
+$change-background-color: background-color 300ms ease-in-out;
+$flip: rotateY(180deg);

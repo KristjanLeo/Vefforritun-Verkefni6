@@ -1,76 +1,70 @@
 // Sækja config
 @import './config';
 
-
 // Allir stílar fyrir bækur
 .books {
-  margin-bottom: $Bottom-margin-large;
+  margin-bottom: $bottom-margin-large;
 
-  & .col{
-    margin-bottom: $Bottom-margin-large;
+  .col {
+    margin-bottom: $bottom-margin-large;
   }
 }
 
 .book {
-  margin-right: 1rem;
-  margin-bottom: $Bottom-margin-large;
-  width: 100%;
-  height: 100%;
-  min-width: 160px;
-
+  background-color: $light-grey;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  margin-bottom: $bottom-margin-large;
+  margin-right: 1rem;
+  min-width: 160px;
+  width: 100%;
 
-  background-color: $Light-grey;
-
-  & > .content {
-    padding: 0.5rem;
-    border: 1px solid $Dark-grey;
+  > .content {
+    border: 1px solid $dark-grey;
     border-top: 0;
-
-    flex: 1;
-
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: space-between;
+    padding: 0.5rem;
   }
 
-  & .image {
+  .image {
     height: 200px;
     overflow: hidden;
   }
 
-  & .image img {
-    object-fit: cover;
-    width: 100%;
+  .image img {
     height: 200px;
-
-    transition: $Smooth;
+    object-fit: cover;
+    transition: $smooth;
+    width: 100%;
   }
 
   &:hover .image img {
-    transform: $Zoom;
+    transform: $zoom;
   }
 
-  & h3{
-    margin-bottom: $Bottom-margin-small;
-    font-size: 1.5*$Default-font-size;
+  h3 {
+    font-size: 1.5*$default-font-size;
+    margin-bottom: $bottom-margin-small;
   }
 
-  & h4{
-    margin-bottom: $Bottom-margin-medium;
-    font-size: 0.875*$Default-font-size;
+  h4 {
+    font-size: 0.875*$default-font-size;
     font-weight: normal;
+    margin-bottom: $bottom-margin-medium;
     text-transform: uppercase;
   }
 
-  & .buy {
+  .buy {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 
-  & .buy .price {
+  .buy .price {
     margin-right: 0.5rem;
   }
 }
