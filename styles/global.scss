@@ -1,22 +1,21 @@
 // Sækja config
 @import './config';
 
-
 // Allir stílar fyrir "global", þ.e.a.s. type selectorar, reset etc
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-size: $default-font-size;
-  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  align-items: center;
   color: $dark-dark-grey;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  font-size: $default-font-size;
+  justify-content: center;
 }
 
 a {
@@ -25,27 +24,31 @@ a {
 
 button {
   background-color: $dark-dark-grey;
-  color: $white;
   border: 1px solid $black;
   border-radius: 5px;
+  color: $white;
   padding: 0.5rem;
-  word-break: initial;
-
   transition:
     $change-color,
-    $change-background-color ;
+    $change-background-color;
+  word-break: initial;
+
   &:hover {
     background-color: $White;
     color: $dark-dark-grey;
   }
+
   &:active {
     background-color: $dark-dark-grey;
-    color: $white;
     border: 1px solid $black;
+    color: $white;
   }
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Montaga', Georgia, serif;
 }
 

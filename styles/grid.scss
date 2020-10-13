@@ -2,9 +2,15 @@
 @import './config';
 
 // Hér skal nota scss @for til að ítra út klösum fyrir grid
+.col {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
 .grid {
-  max-width: $max-width;
   margin: 0 auto;
+  max-width: $max-width;
   overflow: hidden;
 }
 
@@ -15,46 +21,44 @@
   margin-right: -10px;
 }
 
-.col {
-  padding-left: 10px;
-  padding-right: 10px;
-  width: 100%;
+@for $i from 1 through 12 { /* Var ekki alveg viss hvort ég mætti nesta media hérna þar sem það býr til þrefalt nest? */
+  /* Stórt */
+  .col-#{$i} {
+    width: $i*$one-col;
+  }
+
+  /* Medium */
+  @media (max-width: $medium-width) {
+    .col-md-#{$i} {
+      width: $i*$one-col;
+    }
+  }
+
+  /* Small */
+  @media (max-width: $small-width) {
+    .col-sm-#{$i} {
+      width: $i*$one-col;
+    }
+  }
 }
 
-@for $i from 1 through 12{ /* Var ekki alveg viss hvort ég mætti nesta media hérna þar sem það býr til þrefalt nest? */
+@for $i from 1 through 3 {
   /* Stórt */
-  .col-#{$i}{
-   width: $i*$one-col;
- }
-  /* Medium */
- @media (max-width: $medium-width){
-  .col-md-#{$i}{
-   width: $i*$one-col;
- }
- }
-  /* Small */
- @media (max-width: $small-width){
-  .col-sm-#{$i}{
-   width: $i*$one-col;
- }
- }
-}
+  .offset-col-#{$i} {
+    margin-left: $i*$one-col;
+  }
 
-@for $i from 1 through 3{
-  /* Stórt */
-  .offset-col-#{$i}{
-   margin-left: $i*$one-col;
- }
   /* Medium */
-  @media (max-width: $medium-width){
-  .offset-col-md-#{$i}{
-   margin-left: $i*$one-col;
- }
- }
+  @media (max-width: $medium-width) {
+    .offset-col-md-#{$i} {
+      margin-left: $i*$one-col;
+    }
+  }
+
   /* Small */
-   @media (max-width: $small-width){
-  .offset-col-sm-#{$i}{
-   margin-left: $i*$one-col;
- }
- }
+  @media (max-width: $small-width) {
+    .offset-col-sm-#{$i} {
+      margin-left: $i*$one-col;
+    }
+  }
 }
